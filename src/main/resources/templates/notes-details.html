@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Детальнее</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3075/3075908.svg">
+</head>
+<body>
+<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2020/05/06/06/18/blue-5136251_1280.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"/>
+    <header th:insert="blocks/header :: header"></header>
+
+        <div class="container mt-5" style="height: 500px;">
+            <h1>Детальнее</h1>
+            <div th:each="el : ${note}" class="alert alert-info mt-2">
+                <h1 th:text="${el.title}"/>
+                <h5 th:text="${el.full_text}"/>
+                <div class="row">
+                    <a th:href="'/notes/' + ${el.id} + '/edit'" class="btn btn-info btn-lg ml-3">Редактировать</a><br><br>
+                    <form th:action="'/notes/' + ${el.id} + '/remove'" method="post" class="ml-3">
+                        <button class="btn btn-info btn-lg" type="submit">Удалить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    <div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

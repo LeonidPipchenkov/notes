@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3075/3075908.svg">
+</head>
+<body>
+<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2020/05/06/06/18/blue-5136251_1280.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"/>
+    <header th:insert="blocks/header :: header"></header>
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1>Ваш сервис заметок</h1>
+                <p class="lead text-muted">
+                    Сервис "My Notes" это удобный системный
+                    сервис создания и редактирования заметок. Для
+                    форматирования заметок доступны почти все стандартные опции.
+                </p>
+                <p>
+                    <a href="/notes" class="btn btn-primary my-2">Мои заметки</a>
+                    <a href="/notes/add" class="btn btn-secondary my-2">Добавить запись</a>
+                </p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                        <img src="https://content.onliner.by/news/default/1cfdc59c39d059d80ae7909945ef75da.jpeg" width="480" height="260">
+                </div>
+                <div class="col-lg-6 col-md-4 col-md-12 mb-4">
+                    <h2>Чтобы дойти до цели, надо идти.</h2>
+                    <p>
+                        Если вы хотите вырыть большую яму, вам нужно оставаться на одном месте.
+                        Если вы будете бродить по городу с маленькой лопатой, в итоге вы выкопаете
+                        тысячи маленьких ям и не одной большой. Позвоните одному человеку десять раз,
+                        и, возможно, вам удастся продать ему свой товар. Позвоните десяти людям
+                        по одному разу, и вы, скорее всего, получите десять отказов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

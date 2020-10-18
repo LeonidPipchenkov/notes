@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редактирование записи</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3075/3075908.svg">
+</head>
+<body>
+<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2020/05/06/06/18/blue-5136251_1280.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"/>
+    <header th:insert="blocks/header :: header"></header>
+
+        <div class="container mt-5 mb-5" style="height: 500px;">
+            <h1>Редактирование записи</h1>
+            <div th:each="el : ${note}">
+                <form method="post">
+                    <input type="text" th:value="${el.title}" name="title" placeholder="Введите название записи" class="form-control"><br>
+                    <textarea name="full_text" placeholder="Введите текст записи" class="form-control" rows="10" th:text="${el.full_text}" /><br>
+                    <button type="submit" class="btn btn-success">Обновить</button>
+                </form>
+            </div>
+        </div>
+
+    <div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

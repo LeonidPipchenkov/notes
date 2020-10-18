@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3075/3075908.svg">
+</head>
+<body>
+    <div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2020/05/06/06/18/blue-5136251_1280.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;"/>
+    <header th:insert="blocks/header :: header"></header>
+        <div class="container mt-5" style="min-height: 500px;">
+            <h1 th:text="${title}"/>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-5 col-md-4 col-md-12 mb-4 pr-5">
+                        <h1>leonid pipchenkov</h1>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10 col-md-4 col-md-12 mb-4">
+                        <a href="https://www.facebook.com/leonid.piochenkov" class="btn btn-outline-primary btn-lg btn-block">
+                            <span class="fab fa-facebook"></span>   Facebook
+                        </a>
+                        <a href="https://www.instagram.com/braynll/" class="btn btn-outline-info btn-lg btn-block">
+                            <span class="fab fa-instagram"></span>   Instagram
+                        </a>
+                        <a href="https://vk.com/lenik.tacher" class="btn btn-outline-primary btn-lg btn-block">
+                            <span class="fab fa-vk"></span>   Vk
+                        </a>
+                        <a href="mailto:t70a80@gmail.com" class="btn btn-outline-danger btn-lg btn-block">
+                            <span class="fa fa-envelope"></span>   Gmail  t70a80@gmail.com
+                        </a>
+                        <a class="btn btn-outline-warning btn-lg btn-block">
+                            <span class="fa fa-phone"></span>   Tel:  +375 33 695-84-22
+                        </a>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+    
+    <div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
